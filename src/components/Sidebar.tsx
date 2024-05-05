@@ -1,10 +1,10 @@
 import { useState } from "react";
+
 import { AiOutlineFieldTime, AiOutlineCalendar } from "react-icons/ai";
 import { RiCheckboxBlankLine, RiRadioButtonLine } from "react-icons/ri";
 import { RiInputField } from "react-icons/ri";
 import { BsCardText } from "react-icons/bs";
 import { RxDividerHorizontal } from "react-icons/rx";
-
 
 import ControlPanel from "./Control";
 
@@ -30,7 +30,7 @@ export let controls: SortableComponent[] = [
     id: "Textarea",
     icon: <BsCardText />,
   },
-  {id: "Divider", icon:<RxDividerHorizontal />},
+  { id: "Divider", icon: <RxDividerHorizontal /> },
   { id: "Date", icon: <AiOutlineCalendar /> },
   { id: "Time", icon: <AiOutlineFieldTime /> },
 ];

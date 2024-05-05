@@ -1,6 +1,9 @@
 import { useDroppable } from "@dnd-kit/core";
+
 import { commonProps } from "../helpers/ControlProperty";
+
 import { Control as ControlType } from "./Control";
+
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
@@ -13,7 +16,7 @@ export const FormPanel: React.FC<{
   property: any;
   selected: any;
   setSelected: any;
-  isPreview:any
+  isPreview: any;
 }> = (props) => {
   let controlsData: any = {
     Input: {
@@ -40,9 +43,9 @@ export const FormPanel: React.FC<{
     Time: {
       nextId: 0,
     },
-    Hr:{
-      nextId:0,
-    }
+    Hr: {
+      nextId: 0,
+    },
   };
 
   const { isOver, setNodeRef } = useDroppable({
@@ -94,7 +97,6 @@ export const FormPanel: React.FC<{
               id={props.property[id]?.id?.value}
               placeholder={props.property[id]?.placeholder?.value}
               type={"radio"}
-              
               style={{
                 width: props.property[id]?.width?.value + "px",
                 height: props.property[id]?.height?.value + "px",
@@ -170,8 +172,7 @@ export const FormPanel: React.FC<{
       case "Date":
         return (
           <div className="w-full flex  justify-start items-center">
-            <DateTimePicker value={props.property[id]?.value?.value} 
-            />
+            <DateTimePicker value={props.property[id]?.value?.value} />
           </div>
         );
       case "Time":
@@ -181,9 +182,7 @@ export const FormPanel: React.FC<{
           </div>
         );
       case "Hr":
-        return(
-          <hr/>
-        )
+        return <hr />;
       default:
         return <></>;
     }
@@ -223,7 +222,4 @@ export const FormPanel: React.FC<{
       </div>
     </div>
   );
-
 };
-
-

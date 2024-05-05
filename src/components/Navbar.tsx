@@ -1,17 +1,18 @@
 import ReactDOMServer from "react-dom/server";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import Swal from "sweetalert2";
+
 import { HiEye } from "react-icons/hi";
 import { MdOutlineCreateNewFolder } from "react-icons/md";
 import { FaRegCopy } from "react-icons/fa";
 import { MdLocalMall } from "react-icons/md";
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
 
 import { Button } from "./ui/button";
 import { FormPanel } from "./Form";
-import Swal from "sweetalert2";
 
 const Navbar = (props: any) => {
-  const navigation=useNavigate();
+  const navigation = useNavigate();
 
   const clipboardCopyCode = () => {
     const loadingToastId = toast.loading("Copying code to clipboard...", {
@@ -65,7 +66,7 @@ const Navbar = (props: any) => {
         });
         toast.dismiss(loadingToastId);
       });
-      return fullHTML;
+    return fullHTML;
   };
 
   const formPreview = () => {
@@ -113,44 +114,43 @@ const Navbar = (props: any) => {
       `,
     }).then(async (result) => {
       if (result.isConfirmed) {
-        let name=localStorage.getItem("selectedForm");
-        if(!name)
-          {
-            const { value: formName } = await Swal.fire({
-              title: "Form Builder",
-              text: "Enter your form name:",
-              input: "text",
-              showCancelButton: true,
-              confirmButtonText: "Submit",
-              cancelButtonText: "Cancel",
-              inputValidator: (value) => {
-                if (!value) {
-                  return "You need to enter a form name!";
-                }
-              },
-            });
-            name=formName;
-            localStorage.setItem('selectedForm',formName);
-          }
+        let name = localStorage.getItem("selectedForm");
+        if (!name) {
+          const { value: formName } = await Swal.fire({
+            title: "Form Builder",
+            text: "Enter your form name:",
+            input: "text",
+            showCancelButton: true,
+            confirmButtonText: "Submit",
+            cancelButtonText: "Cancel",
+            inputValidator: (value) => {
+              if (!value) {
+                return "You need to enter a form name!";
+              }
+            },
+          });
+          name = formName;
+          localStorage.setItem("selectedForm", formName);
+        }
 
         if (name) {
-          let oldForms:any = localStorage.getItem('form');
-          let formData:any;
-        
+          let oldForms: any = localStorage.getItem("form");
+          let formData: any;
+
           if (oldForms) {
             oldForms = JSON.parse(oldForms);
             formData = {
               ...oldForms,
-              [name]: formHTML
+              [name]: formHTML,
             };
           } else {
             formData = {
-              [name]: formHTML
+              [name]: formHTML,
             };
           }
-        
+
           localStorage.setItem("form", JSON.stringify(formData));
-        
+
           toast.success(name + " Form is Saved Successfully.....!!!!", {
             style: {
               borderRadius: "10px",
@@ -159,8 +159,7 @@ const Navbar = (props: any) => {
               padding: "12px",
             },
           });
-        }
-         else {
+        } else {
           toast.error("Opps..!!!, your form is not saved..!!", {
             style: {
               borderRadius: "10px",
@@ -192,7 +191,7 @@ const Navbar = (props: any) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        localStorage.removeItem('selectedForm')
+        localStorage.removeItem("selectedForm");
         props.setSelected("form");
         props.setCurrentForm([]);
         props.setProperty({
@@ -216,7 +215,7 @@ const Navbar = (props: any) => {
     });
   };
   const handleAllNewForm = () => {
-    navigation('/')
+    navigation("/");
   };
 
   return (
