@@ -23,6 +23,7 @@ const preview=(formName:string)=>{
 }
 
 const Dashboard = () => {
+    localStorage.removeItem('selectedForm');
     const navigation=useNavigate();
 
     const [previousForms, setPreviousForms] = useState<any[]>([]);
