@@ -1,46 +1,109 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FormaX :Form Builder WebApp
 
-## Available Scripts
+Introducing FormaX Form Builder: Easy Form Creation Made Simple.
 
-In the project directory, you can run:
+This Form Builder makes creating forms a piece of cake! With our easy drag-and-drop feature, you can design forms exactly how you want them without needing to be a tech whiz.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Dashboard for All Your Forms: Create multiple forms and access them all from your dashboard.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Easy Drag-and-Drop: Smooth drag-and-drop functionality makes building forms a breeze.
 
-### `npm test`
+- Generate Code with One Click: Instantly generate code for your forms and copy it with just one click.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Preview and Modify: See a preview of your form as you build it, making it easy to tweak and adjust.
 
-### `npm run build`
+- Customize Form Properties: Easily change form elements like labels, placeholders, button sizes, and colors to fit your style.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Run Locally
 
-### `npm run eject`
+Clone the project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+  git clone https://github.com/akshay0077/Form-Builder-Task/
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Go to the project directory
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+  cd Form-Builder-Task
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Install dependencies
 
-## Learn More
+```bash
+  npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Start the server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  npm start
+```
+
+
+## Demo
+
+Video Link : https://drive.google.com/file/d/1FZRkEr63JzZmTJsrldcQVBAkbUFdCRdf/view?usp=sharing
+
+
+
+## Screenshots
+
+### 1. Dashboard Screen:  See All Your Saved Forms in One Place
+
+This screen displays all the forms you've created and saved.
+
+![alt text](https://raw.githubusercontent.com/akshay0077/Form-Builder-Task/main/screenshot/01-welcome.png)
+
+
+### 2. Form Builder Screen : 
+
+Create Your Own Customizable Forms with Easy Drag-and-Drop Functionality.
+
+![alt text](https://raw.githubusercontent.com/akshay0077/Form-Builder-Task/main/screenshot/02-home.png)
+
+### 3. Form Previou Screen :
+In this screen, user can preview their forms to see how they'll appear to others.
+
+![alt text](https://raw.githubusercontent.com/akshay0077/Form-Builder-Task/main/screenshot/03-form.png)
+
+
+### 4. Save the Form
+Save Your Customizable Forms
+
+![alt text](https://raw.githubusercontent.com/akshay0077/Form-Builder-Task/main/screenshot/04-form.png)
+
+### 5. Better User Experience to show the Toast Message 
+![alt text](https://raw.githubusercontent.com/akshay0077/Form-Builder-Task/main/screenshot/04form-test.png)
+
+### 6. Form Name Screen:
+Give the form name and  save it
+
+![alt text](https://raw.githubusercontent.com/akshay0077/Form-Builder-Task/main/screenshot/05-form-name.png)
+
+### 7. Alert Message Screen :
+
+![alt text](https://raw.githubusercontent.com/akshay0077/Form-Builder-Task/main/screenshot/06-pop.png)
+
+### 8. New Form Generate Screen :
+![alt text](https://raw.githubusercontent.com/akshay0077/Form-Builder-Task/main/screenshot/07-new-form.png)
+
+### 9. Form List Dashboard Screen :  
+![alt text](https://raw.githubusercontent.com/akshay0077/Form-Builder-Task/main/screenshot/08-all.png)
+
+### 10. Previou the any Form by Clicking :
+![alt text](https://raw.githubusercontent.com/akshay0077/Form-Builder-Task/main/screenshot/09-previo.png)
+
+
+
+
+
+
+## Authors
+
+- [@Akshay Kher](https://github.com/akshay0077)
