@@ -40,7 +40,7 @@ const Dashboard = () => {
     }, []); // Empty dependency array ensures this effect runs only once on mount
 
     const handleCreateNewForm = () => {
-        window.location.href = "/addnew";
+        window.location.href = "https://main--formax-form-builder.netlify.app/addnew";
     };
 
     return (
