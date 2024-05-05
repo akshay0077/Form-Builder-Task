@@ -5,7 +5,7 @@ import {
   SortableContext,
   horizontalListSortingStrategy,
 } from "@dnd-kit/sortable";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Control as ControlType} from "./components/Control"; 
 import Navbar from "./components/Navbar";
 import ListForm from "./components/ListForm";
@@ -15,7 +15,7 @@ import Sidebar from "./components/Sidebar";
 import { FormPanel } from "./components/Form";
 import RightSidebar from "./components/RightSidebar";
 
-const App: React.FC = () => {
+const NewForm: React.FC = () => {
   const [droppedControls, setDroppedControls] = useState<ControlType[]>([]);
   const [selected, setSelected] = useState<any>("form");
   const [property, setProperty] = useState<any>({
@@ -36,10 +36,6 @@ const App: React.FC = () => {
       setSelected(newId)
     }
   };
-  switch (window.location.pathname) {
-    case "/":
-      return <ListForm />;
-    default:
       return (
         <div className="overflow-hidden h-screen w-screen">
           <Navbar currentForm={droppedControls} setCurrentForm={setDroppedControls}  property={property}
@@ -79,7 +75,16 @@ const App: React.FC = () => {
 />
         </div>
       );
-  }
+};
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ListForm/>} />
+        <Route path="/addnew" element={<NewForm />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;

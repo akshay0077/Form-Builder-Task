@@ -2,6 +2,7 @@ import { FiFilePlus } from "react-icons/fi";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const preview=(formName:string)=>{
     let allForms:any=localStorage.getItem('form');
@@ -22,6 +23,8 @@ const preview=(formName:string)=>{
 }
 
 const Dashboard = () => {
+    const navigation=useNavigate();
+
     const [previousForms, setPreviousForms] = useState<any[]>([]);
 
     useEffect(() => {
@@ -40,7 +43,7 @@ const Dashboard = () => {
     }, []); // Empty dependency array ensures this effect runs only once on mount
 
     const handleCreateNewForm = () => {
-        window.location.href = "https://main--formax-form-builder.netlify.app/addnew";
+        navigation('/addnew')
     };
 
     return (

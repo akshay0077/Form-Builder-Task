@@ -4,12 +4,15 @@ import { MdOutlineCreateNewFolder } from "react-icons/md";
 import { FaRegCopy } from "react-icons/fa";
 import { MdLocalMall } from "react-icons/md";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 import { Button } from "./ui/button";
 import { FormPanel } from "./Form";
 import Swal from "sweetalert2";
 
 const Navbar = (props: any) => {
+  const navigation=useNavigate();
+
   const clipboardCopyCode = () => {
     const loadingToastId = toast.loading("Copying code to clipboard...", {
       style: {
@@ -213,7 +216,7 @@ const Navbar = (props: any) => {
     });
   };
   const handleAllNewForm = () => {
-    window.location.href = "/";
+    navigation('/')
   };
 
   return (
