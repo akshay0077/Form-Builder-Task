@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { DndContext} from "@dnd-kit/core";
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import {
   SortableContext,
   horizontalListSortingStrategy,

@@ -1,5 +1,5 @@
 import { useDroppable } from "@dnd-kit/core";
-import { commonProps, propertyList } from "../helpers/ControlProperty";
+import { commonProps } from "../helpers/ControlProperty";
 import { Control as ControlType } from "./Control";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";

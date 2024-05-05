@@ -18,6 +18,7 @@ const RightSidebar: React.FC<any> = ({ selected,property, setProperty }) => {
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const renderProperty = (key: string, value: PropertyValue) => {
     if (key === "type" && Array.isArray(value.value)) {
       return (
@@ -69,7 +70,7 @@ const RightSidebar: React.FC<any> = ({ selected,property, setProperty }) => {
         renderProperty(key, value)
       );
     } 
-  }, [property]);
+  }, [property, renderProperty, selected]);
   return (
     <div className="bg-neutral-900 w-[25%] h-screen overflow-y-auto px-2">
       <h3 className="ml-5">Styling Properties</h3>
